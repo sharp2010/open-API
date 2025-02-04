@@ -35,8 +35,10 @@ const displayBreeds = (breeds) => {
     const getCatImage = async () => {
         const url = 'https://api.thecatapi.com/v1/images/search';
         const data = await fetchData(url); 
+
     //get the image url from the response
-        const catImageUrl = response.data[0].url;
+        const catImageUrl = data[0].url;
+
     // update src of image element
         document.getElementById('catImage').src = catImageUrl;
         console.log('Cat Image URL:', catImageUrl);
@@ -52,7 +54,7 @@ const breeds = await fetchData('https://api.thecatapi.com/v1/breeds');
 const searchBreed = async () => {
     const searchName = document.getElementById('breedSearch').value.toLowerCase();
     const breeds = await fetchData('https://api.thecatapi.com/v1/breeds');
-    const filteredBreeds = breeds.filte(breed => breed.name.toLowerCase().includes(searchName));
+    const filteredBreeds = breeds.filter(breed => breed.name.toLowerCase().includes(searchName));
     displayBreeds(filteredBreeds);
 };
         
@@ -73,3 +75,6 @@ breedsLink.addEventListener('click', () => {
     breedsSection.style.display = 'none';
     getCatBreeds();
 });
+
+//event listener for breed search button
+document.getElementById('searchBreedButton').addEventListener('click', searchBreed);
