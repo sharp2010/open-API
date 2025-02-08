@@ -27,6 +27,7 @@ const displayBreeds = (breeds) => {
             <p>${breed.description}</p>
             <img src="${breed.image?.url}" alt="${breed.name}" style="max-width: 200px; height: auto;" />
         `;
+
         breedsList.appendChild(breedElement);
     });
 };
@@ -47,6 +48,7 @@ const displayBreeds = (breeds) => {
 //function to get cat breeds
 const getCatBreeds = async () => {
 const breeds = await fetchData('https://api.thecatapi.com/v1/breeds');
+console.log(breeds);
     displayBreeds(breeds);
 };
 
@@ -66,13 +68,13 @@ const breedsSection = document.getElementById('breeds');
 
 catLink.addEventListener('click', () => {
     catSection.style.display = 'block';
-    breedsSection.style.display = 'none';
+  //  breedsSection.style.display = 'none';
     getCatImage();
 });
 
 breedsLink.addEventListener('click', () => {
     catSection.style.display = 'block';
-    breedsSection.style.display = 'none';
+  // breedsSection.style.display = 'none';
     getCatBreeds();
 });
 
