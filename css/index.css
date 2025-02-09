@@ -1,1 +1,55 @@
+body {
+    background-color: bisque;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border-style: ridge;
+    border-color: darkgray;
+    border-width: 1em;
+}
 
+/* styling for cat section container */
+.cat-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+/* styling for the cat image */
+#catImage {
+    /* adjusts the width of the image*/
+    max-width: 300px;
+    height: auto;
+    /* will add space between image and description*/
+    margin-right: 20px;
+}
+
+/* syling for the cat desciption */
+.cat-description {
+    /* makes sure desciption will take up remaining space */
+    flex-grow: 1;
+    text-align: left;
+}
+
+/* styling for each breed container */
+.breed {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+/* styling for breed image */
+.breed img {
+    max-width: 200px;
+    height: auto;
+    /* adds space between image and description */
+    margin-right: 20px;
+}
+
+/* styling for bree description */
+.breed .breed-description {
+    /* makes sure description takes up remaining space */
+    flex-grow: 1;
+    text-align: left;
+}

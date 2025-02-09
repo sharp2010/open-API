@@ -23,9 +23,12 @@ const displayBreeds = (breeds) => {
         const breedElement = document.createElement('div');
         breedElement.classList.add('breed');
         breedElement.innerHTML = `
+            <img src="${breed.image?.url}" alt="${breed.name}"/>
+            <div class="breed-description">
             <h3>${breed.name}</h3>
             <p>${breed.description}</p>
-            <img src="${breed.image?.url}" alt="${breed.name}" style="max-width: 200px; height: auto;" />
+            </div>
+            
         `;
 
         breedsList.appendChild(breedElement);

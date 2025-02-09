@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/index.css">
     <title>Cats</title>
 </head>
+
 <body>
     <nav>
         <a href="#" id="catLink">Cat images</a>
@@ -16,12 +18,16 @@
 
     <!--Section to show cat images-->
     <section id="cat">
-        <img id="catImage" src="" alt="Image of cat">
-        <button id="getCatImage">Click to get another cat image</button>
+        <div class="cat-container">
+            <img id="catImage" src="" alt="Image of cat">
+            <div class="cat-description">
+                <button id="getCatImage">Click to get another cat image</button>
+            </div>
+        </div>
     </section>
 
-     <!--Section to show cat breeds-->
-     <section id="breeds">
+    <!--Section to show cat breeds-->
+    <section id="breeds">
         <h2>Cat Breeds</h2>
 
         <!-- search input to filter breeds -->
@@ -29,12 +35,13 @@
         <button id="searchBreedButton">Search</button>
 
         <!-- div to display ist of breeds -->
-         <div id="breedsList"></div>
-     </section>
+        <div id="breedsList"></div>
+    </section>
 
     <!-- Scripts-->
-     <!-- added axios cdn script, was unable to get it to work with it in index.js-->
+    <!-- added axios cdn script, was unable to get it to work with it in index.js-->
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-     <script src="js/index.js"></script>
+    <script src="js/index.js"></script>
 </body>
+
 </html>
