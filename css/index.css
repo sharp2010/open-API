@@ -5,12 +5,26 @@ body {
     border-color: darkgray;
     border-width: 1em;
 }
+nav {
+    padding-top: 50px;
+}
+#catLink {
+    margin-left: 25px;
+}
+#breedsLink{
+    margin-left: 56em;
+}
+#pageTitle {
+    margin-left: 11em;
+}
+
 
 /* styling for cat section container */
 .cat-container {
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    padding: 25px;
 }
 
 /* styling for the cat image */
@@ -52,4 +66,11 @@ body {
     /* makes sure description takes up remaining space */
     flex-grow: 1;
     text-align: left;
+}
+#breedSearch {
+    margin-left: 55em;
+}
+
+#breedsTitle {
+    margin-left: 19em;
 }

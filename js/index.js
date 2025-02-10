@@ -63,6 +63,9 @@ const searchBreed = async () => {
     const breeds = await fetchData('https://api.thecatapi.com/v1/breeds');
     const filteredBreeds = breeds.filter(breed => breed.name.toLowerCase().includes(searchName));
     displayBreeds(filteredBreeds);
+
+    // will clear the breed search input
+    document.getElementById('breedSearch').value = '';
 };
 
 // Event listeners for navigation links
@@ -82,6 +85,9 @@ breedsLink.addEventListener('click', () => {
 
     getCatBreeds();
 });
+
+// event listener for "get another cat image"
+document.getElementById('getCatImage').addEventListener('click', getCatImage);
 
 //event listener for breed search button
 document.getElementById('searchBreedButton').addEventListener('click', searchBreed);
