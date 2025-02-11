@@ -17,18 +17,24 @@ const fetchData = async (url) => {
 // function to get breed list
 const displayBreeds = (breeds) => {
     const breedsList = document.getElementById('breedsList');
+
     // will clear previous results
     breedsList.innerHTML = '';
+
+
     breeds.forEach(breed => {
         const breedElement = document.createElement('div');
         breedElement.classList.add('breed');
+
+        // this will populate breed image or default image
+        const breedImageUrl = breed.image?.url || 'assets/defaultCat.png';
+
         breedElement.innerHTML = `
-            <img src="${breed.image?.url}" alt="${breed.name}"/>
+            <img src="${breedImageUrl}" alt="${breed.name}"/>
             <div class="breed-description">
             <h3>${breed.name}</h3>
             <p>${breed.description}</p>
-            </div>
-            
+            </div> 
         `;
 
         breedsList.appendChild(breedElement);
