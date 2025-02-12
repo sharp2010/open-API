@@ -1,0 +1,191 @@
+/* styling for mobile device first */
+body {
+    background-color: bisque;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border-style: ridge;
+    border-color: darkgray;
+    border-width: 1em;
+    margin: 0;
+    padding: 0;
+}
+
+/* navbar styling */
+nav {
+    padding-top: 20px;
+    text-align: center;
+}
+
+#catLink, #breedsLink {
+    margin: 10px;
+    font-size: 18px;
+    color: #333;
+}
+
+/* styling for page title */
+#pageTitle {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 24px;
+}
+
+/* styling for cat section container */
+.cat-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* styling for the cat image */
+#catImage {
+    /* adjusts the width of the image*/
+    max-width: 100%;
+    width: 90%;
+    height: auto;
+    /* will add space between image and description*/
+    margin-bottom: 20px;
+}
+
+/* syling for the cat desciption */
+.cat-description {
+    text-align: center;
+}
+
+/* styling for each breed container */
+.breed {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+/* styling for breed image */
+.breed img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/* styling for breed description */
+.breed .breed-description {
+    text-align: center;
+}
+
+/* styling for breed search input */
+#breedSearch {
+    width: 80%;
+    margin:20px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+/* styling for breed search button */
+#searchBreedButton {
+    margin: 10px 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+/* styling for section title */
+#breedsTitle {
+    text-align: center;
+    font-size: 22px;
+}
+
+/* start of styling with media queries for different screen sizes */
+
+/* styling for tablet size */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .cat-container {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 30px;
+    }
+
+    #catImage {
+        max-width: 45%;
+        margin-right: 20px;
+    }
+
+    .cat-description {
+        text-align: left;
+    }
+
+    /* styling breed */
+    .breed {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 95%;
+    }
+
+    .breed img {
+        max-width: 175px;
+        margin-right: 20px;
+    }
+
+    .breed .breed-description {
+        width: 60%;
+    }
+    #breedSearch {
+        margin-left: 10em;
+        width: 40%;
+    }
+
+    #breedsTitle {
+        font-size: 28px;
+    } 
+}
+
+/* styling for desktop */
+@media (min-width: 1025px) {
+    body {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    /* styling for cat section */
+    .cat-container {
+        justify-content: flex-start;
+        padding: 50px;
+    }
+
+    #catImage {
+        max-width: 40%;
+        margin-right: 30px;
+    }
+
+    /* styling for breed */
+    .breed {
+        flex-direction: row;
+        justify-content: flex-start;
+        margin-left: 30px;
+        margin-bottom: 30px;
+    }
+
+    .breed img {
+        max-width: 200px;
+        margin-right: 150px;
+    }
+
+    .breed .breed-description {
+        flex-grow: 1;
+        max-width: 600px;
+    }
+
+    #breedSearch {
+        width: 20%;
+        margin-left: 40em;
+    }
+
+    #breedsTitle {
+        font-size: 36px;
+        text-align: center;
+    }
+
+    #searchBreedButton {
+        width: 100px;  
+    }
+}

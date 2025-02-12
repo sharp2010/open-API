@@ -1,15 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/index.css">
-    <title>Open API</title>
+    <title>Cats</title>
 </head>
+
 <body>
-    
+    <nav>
+        <h1 id="pageTitle">Cat Images and Breeds</h1>
+        <a href="#" id="catLink">Cat images</a>
+        <a href="#" id="breedsLink">Cat Breeds</a>
+    </nav>
+
+    <!--Section to show cat images-->
+    <section id="cat">
+        <div class="cat-container">
+            <img id="catImage" src="" alt="Image of cat">
+            <div class="cat-description">
+                <button id="getCatImage">Click to get another cat image</button>
+            </div>
+        </div>
+    </section>
+
+    <!--Section to show cat breeds-->
+    <section id="breeds">
+        <h2 id="breedsTitle">Cat Breeds</h2>
+
+        <!-- search input to filter breeds -->
+        <input type="text" id="breedSearch" placeholder="Search for a breed">
+        <button id="searchBreedButton">Search</button>
+
+        <!-- div to display ist of breeds -->
+        <div id="breedsList"></div>
+    </section>
 
     <!-- Scripts-->
-     <script src="js/index.js"></script>
+    <!-- added axios cdn script, was unable to get it to work with it in index.js-->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="js/index.js"></script>
 </body>
+
 </html>
